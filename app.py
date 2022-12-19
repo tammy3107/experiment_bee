@@ -21,7 +21,7 @@ from detectron2.utils.visualizer import Visualizer
 import os
 from detectron2.data.datasets import register_coco_instances
 
-os.chdir('/content/drive/MyDrive/Experiments_Bees/FRCNN')
+os.chdir('/content/drive/MyDrive/Experiments_Bees/')
 
 
 
@@ -45,7 +45,7 @@ uploaded_file = st.file_uploader("Choose a  file",type = file_type)
 
 
 cfg = get_cfg()
-cfg.MODEL.WEIGHTS = os.path.join("/content/drive/MyDrive/Experiments_Bees/FRCNN/output","model_final.pth")
+cfg.MODEL.WEIGHTS = os.path.join("/content/drive/MyDrive/Experiments_Bees/output","model_final.pth")
 
 cfg.DATASETS.TEST = ("my_dataset_test")
 cfg.MODEL.ROI_HEADS.SCORE_THRESH_TEST = 0.7   # set the testing threshold for this model
